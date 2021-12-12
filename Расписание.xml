@@ -1,0 +1,190 @@
+<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>
+<timetable>
+   <institute subjects = "Timetable">
+      <subjectname monday = "Физкультура"></subjectname>
+      <subjectname monday = "Английский язык"></subjectname>
+      <subjectname monday = "СТИП"></subjectname>
+	  <subjectname tuesday = ""></subjectname>
+      <subjectname tuesday = "М/м технологии"></subjectname>
+      <subjectname tuesday = "МПИС"></subjectname>
+	  <subjectname wednesday = "Технологии создания веб-ресурсов"></subjectname>
+      <subjectname wednesday = "Технологии создания веб-ресурсов"></subjectname>
+	  <subjectname thursday = ""></subjectname>
+      <subjectname thursday = "АИС"></subjectname>
+      <subjectname thursday = "АИС"></subjectname> 
+	  <subjectname friday = "СТУБД"></subjectname>
+      <subjectname friday = "СТУБД"></subjectname>	  
+	  <subjectname saturday = "Философия науки и техники"></subjectname>
+      <subjectname saturday = ""></subjectname>
+      <subjectname saturday = "СТООП"></subjectname>	  
+   </institute>
+package com.tutorialspoint.xml;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import org.w3c.dom.Attr;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import java.io.File;
+
+public class CreateXmlFileDemo {
+
+   public static void main(String argv[]) {
+
+      try {
+         DocumentBuilderFactory dbFactory =
+         DocumentBuilderFactory.newInstance();
+         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+         Document doc = dBuilder.newDocument();
+         
+         // root element
+         Element rootElement = doc.createElement("timetable");
+         doc.appendChild(rootElement);
+
+         // intstitute element
+         Element institute = doc.createElement("institute");
+         rootElement.appendChild(institute);
+
+         // setting attribute to element
+         Attr attr = doc.createAttribute("subjects");
+         attr.setValue("Timetable");
+         institute.setAttributeNode(attr);
+
+         // subjectname monday element
+         Element subjectname = doc.createElement("subjectname");
+         Attr attrType = doc.createAttribute("monday");
+         attrType.setValue("1");
+         monday.setAttributeNode(attrType);
+         monday.appendChild(doc.createTextNode("Физкультура"));
+         institute.appendChild(monday);
+
+         Element subjectname1 = doc.createElement("monday");
+         Attr attrType1 = doc.createAttribute("monday");
+         attrType1.setValue("2");
+         subjectname1.setAttributeNode(attrType1);
+         subjectname1.appendChild(doc.createTextNode("Английский язык"));
+         subjectname1.appendChild(subjectname1);
+
+		 Element subjectname2 = doc.createElement("monday");
+         Attr attrType1 = doc.createAttribute("monday");
+         attrType1.setValue("3");
+         subjectname2.setAttributeNode(attrType1);
+         subjectname2.appendChild(doc.createTextNode("СТИП"));
+         subjectname2.appendChild(subjectname2);
+		 
+		 // subjectname tuesday element
+         Element subjectname = doc.createElement("subjectname");
+         Attr attrType = doc.createAttribute("tuesday");
+         attrType.setValue("1");
+         tuesday.setAttributeNode(attrType);
+         tuesday.appendChild(doc.createTextNode(""));
+         institute.appendChild(tuesday);
+
+         Element subjectname1 = doc.createElement("tuesday");
+         Attr attrType1 = doc.createAttribute("tuesday");
+         attrType1.setValue("2");
+         subjectname1.setAttributeNode(attrType1);
+         subjectname1.appendChild(doc.createTextNode("М/м технологии"));
+         subjectname1.appendChild(subjectname1);
+
+		 Element subjectname2 = doc.createElement("tuesday");
+         Attr attrType1 = doc.createAttribute("tuesday");
+         attrType1.setValue("3");
+         subjectname2.setAttributeNode(attrType1);
+         subjectname2.appendChild(doc.createTextNode("МПИС"));
+         subjectname2.appendChild(subjectname2);
+		 
+		 // subjectname wednesday element
+         Element subjectname = doc.createElement("subjectname");
+         Attr attrType = doc.createAttribute("wednesday");
+         attrType.setValue("1");
+         wednesday.setAttributeNode(attrType);
+         wednesday.appendChild(doc.createTextNode("Технологии создания веб-ресурсов"));
+         institute.appendChild(wednesday);
+
+         Element subjectname1 = doc.createElement("wednesday");
+         Attr attrType1 = doc.createAttribute("wednesday");
+         attrType1.setValue("2");
+         subjectname1.setAttributeNode(attrType1);
+         subjectname1.appendChild(doc.createTextNode("Технологии создания веб-ресурсов"));
+         subjectname1.appendChild(subjectname1);
+	
+		 // subjectname thursday element
+         Element subjectname = doc.createElement("subjectname");
+         Attr attrType = doc.createAttribute("thursday");
+         attrType.setValue("1");
+         thursday.setAttributeNode(attrType);
+         thursday.appendChild(doc.createTextNode(""));
+         institute.appendChild(thursday);
+
+         Element subjectname1 = doc.createElement("thursday");
+         Attr attrType1 = doc.createAttribute("thursday");
+         attrType1.setValue("2");
+         subjectname1.setAttributeNode(attrType1);
+         subjectname1.appendChild(doc.createTextNode("АИС"));
+         subjectname1.appendChild(subjectname1);
+
+		 Element subjectname2 = doc.createElement("thursday");
+         Attr attrType1 = doc.createAttribute("thursday");
+         attrType1.setValue("3");
+         subjectname2.setAttributeNode(attrType1);
+         subjectname2.appendChild(doc.createTextNode("АИС"));
+         subjectname2.appendChild(subjectname2);
+		 
+		 // subjectname friday element
+         Element subjectname = doc.createElement("subjectname");
+         Attr attrType = doc.createAttribute("friday");
+         attrType.setValue("1");
+         friday.setAttributeNode(attrType);
+         friday.appendChild(doc.createTextNode("СТУБД"));
+         institute.appendChild(friday);
+
+         Element subjectname1 = doc.createElement("friday");
+         Attr attrType1 = doc.createAttribute("friday");
+         attrType1.setValue("2");
+         subjectname1.setAttributeNode(attrType1);
+         subjectname1.appendChild(doc.createTextNode("СТУБД"));
+         subjectname1.appendChild(subjectname1);
+		 
+		 // subjectname saturday element
+         Element subjectname = doc.createElement("subjectname");
+         Attr attrType = doc.createAttribute("saturday");
+         attrType.setValue("1");
+         saturday.setAttributeNode(attrType);
+         saturday.appendChild(doc.createTextNode("Философия науки и техники"));
+         institute.appendChild(saturday);
+
+         Element subjectname1 = doc.createElement("saturday");
+         Attr attrType1 = doc.createAttribute("saturday");
+         attrType1.setValue("2");
+         subjectname1.setAttributeNode(attrType1);
+         subjectname1.appendChild(doc.createTextNode(""));
+         subjectname1.appendChild(subjectname1);
+
+		 Element subjectname2 = doc.createElement("saturday");
+         Attr attrType1 = doc.createAttribute("saturday");
+         attrType1.setValue("3");
+         subjectname2.setAttributeNode(attrType1);
+         subjectname2.appendChild(doc.createTextNode("СТООП"));
+         subjectname2.appendChild(subjectname2);
+
+         // write the content into xml file
+         TransformerFactory transformerFactory = TransformerFactory.newInstance();
+         Transformer transformer = transformerFactory.newTransformer();
+         DOMSource source = new DOMSource(doc);
+         StreamResult result = new StreamResult(new File("C:\\timetable.xml"));
+         transformer.transform(source, result);
+         
+         // Output to console for testing
+         StreamResult consoleResult = new StreamResult(System.out);
+         transformer.transform(source, consoleResult);
+      } catch (Exception e) {
+         e.printStackTrace();
+      }
+   }
+}
+</timetable>
